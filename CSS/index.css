@@ -1,0 +1,93 @@
+/*__________________________________________________
+|                                                   |
+|       ====== PAGE INDEX UTILISATEURS ======       |
+|__________________________________________________*/
+
+/* Présentation accueil */
+
+.presentation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#photo-accueil {
+    width: 50%;
+    height: auto;
+    max-width: 100%;
+    border-radius: var(--border-radius-principal);
+    margin: 2rem 2rem 4rem 2rem;
+}
+
+.texte-accueil {
+    color: var(--couleur-texte);
+    line-height: 3rem;
+    font-weight: 600;
+    text-align: center;
+    margin-right: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.btn-menu {
+    margin-top: 5rem;
+    align-self: center;
+}
+
+/* Section avis utilisateurs */
+
+.avis {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+#liste-avis {
+    background-color: var(--couleur-secondaire-25);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0.6rem 0.8rem 0 var(--couleur-secondaire);
+}
+
+.btn-avis {
+    margin: 3rem 2rem;
+    align-self: flex-start;
+}
+
+.avis-container {
+    overflow: hidden;
+    height: 180px;
+    padding: 5px 0;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+
+.avis-slider {
+    display: flex;
+    flex-direction: column;
+    animation: defilement-avis 25s linear infinite;
+}
+
+.avis-item {
+    background: #fff;
+    padding: 12px 20px;
+    font-size: 2rem;
+}
+
+@keyframes defilement-avis {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+/* Pause au survol */
+.avis-container:hover .avis-slider {
+    animation-play-state: paused;
+}

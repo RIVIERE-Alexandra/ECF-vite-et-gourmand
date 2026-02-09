@@ -1,0 +1,13 @@
+# robots.txt pour le site Vite et Gourmand
+# Ce fichier indique aux moteurs de recherche quelles sections ne pas explorer.
+
+User-agent: *
+Disallow: /admin/
+Disallow: /employe/
+Disallow: /connexion-admin.html
+Disallow: /connexion-employe.html
+Disallow: /index-employe.html
+Allow: /
+
+# Plan du site (à ajouter quand il sera prêt)
+# Sitemap: https://www.viteetgourmand.fr/sitemap.xml

@@ -1,0 +1,43 @@
+/*__________________________________________________
+|                                                   |
+|       ====== PAGE AVIS UTILISATEURS ======        |
+|__________________________________________________*/
+
+.form-avis {
+    width: 100%;
+    text-align: left;
+}
+
+#avis {
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 1.8rem;
+    border-radius: var(--border-radius-principal);
+}
+
+.nom-avis {
+    width: 25%;
+}
+
+/* Style pour les étoiles de notation */
+
+.notation {
+    color: var(--couleur-primaire);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    width: 10%;
+}
+
+.notation label {
+    font-size: 3rem;
+}
+
+.radio {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    clip: rect(0, 0, 0, 0);
+}

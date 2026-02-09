@@ -1,0 +1,141 @@
+/*__________________________________________________
+|                                                   |
+|   ====== PAGE RECAP COMMANDE UTILISATEUR ======   |
+|__________________________________________________*/
+
+/*=== generale page recap commande ===*/
+
+main.centrer-page-recap-cmd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    margin: 0 auto;
+    gap: 5rem;
+}
+
+.titre1-cmd {
+    width: 60%;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.titre2-cmd {
+    width: 85%;
+}
+
+.ligne-total-cmd {
+    font-weight: 600;
+    text-align: right;
+    background-color: var(--couleur-secondaire-35);
+}
+
+/*=== Boutons page commandes ===*/
+.btn-valider-cmd {
+    margin-top: 2rem;
+    align-self: center;
+}
+
+.btn-ajouter,
+.btn-retirer {
+    background-color: var(--couleur-primaire);
+    color: var(--texte-boutons);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+/*=== Formulaire infos client ===*/
+
+.formulaire-info-prestation {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: var(--largeur-formulaire-standard);
+    gap: 1.5rem;
+    box-sizing: border-box;
+}
+
+.form-block {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem;
+}
+
+.form-block label {
+    width: 120px;
+    font-weight: var(--label-font-weight);
+    text-align: right;
+    padding-right: 1rem;
+}
+
+.form-block input {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.info-date-livraison {
+    color: var(--couleur-primaire);
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.taille-police-facturation {
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 600;
+    color: rgba(255, 0, 0, 0.7);
+    margin-top: 1.5rem;
+}
+
+/* Message d'erreur date */
+
+.msg-erreur-date {
+    color: #d10000;
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 1;
+    transition: opacity 0.6s
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+/* Animation shake vers la date en cas de selection d'une mauvaise date*/
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-5px);
+    }
+
+    40% {
+        transform: translateX(5px);
+    }
+
+    60% {
+        transform: translateX(-5px);
+    }
+
+    80% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.shake-erreur {
+    animation: shake 0.4s ease;
+    border: 2px solid #d10000 !important;
+}

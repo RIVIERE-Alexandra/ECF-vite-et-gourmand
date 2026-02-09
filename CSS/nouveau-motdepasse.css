@@ -1,0 +1,34 @@
+/*__________________________________________________
+|                                                   |
+|=====  PAGE DE REINITIALISATION MOT DE PASSE  =====|
+|__________________________________________________*/
+
+.reinitialiser-mdp {
+    margin: 0 auto;
+    width: 40%;
+    text-align: left;
+}
+
+.reinitialiser-mdp input {
+    width: 100%;
+    margin: 1.5rem 0;
+}
+
+.reinitialiser-mdp fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.reinitialiser-mdp fieldset div {
+    display: flex;
+    align-items: center;
+}
+
+.reinitialiser-mdp small {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--couleur-primaire);
+}
+
+

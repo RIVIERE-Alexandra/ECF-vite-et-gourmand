@@ -1,0 +1,407 @@
+/*__________________________________________________
+|                                                   |
+|====== RESET CSS par defaut des navigateurs ====== |
+|__________________________________________________*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    font-size: 62.5%;
+    /* 1rem = 10px */
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+textarea,
+select {
+    font: inherit;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/*__________________________________________________
+|                                                   |
+|   ====== Nouveau CSS global pour le site ======   |
+|__________________________________________________*/
+
+/* mise en place des diverses variables */
+
+:root {
+    /* Couleurs */
+    --couleur-primaire: #660000;
+    --couleur-secondaire: #C77B7B;
+    --couleur-tertiaire: #000000;
+    --couleur-texte: #4E5B4B;
+    --couleur-ombre-principale: var(--couleur-primaire);
+    --couleur-primaire-40: rgba(102, 0, 0, 0.4);
+    --couleur-primaire-60: rgba(102, 0, 0, 0.6);
+    --couleur-secondaire-15: rgba(199, 123, 123, 0.15);
+    --couleur-secondaire-25: rgba(199, 123, 123, 0.25);
+    --couleur-secondaire-35: rgba(199, 123, 123, 0.35);
+
+    /* Ombres */
+    --btn-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.25);
+    --ombre-principale: 0 0.6rem 0.8rem 0 var(--couleur-primaire);
+    --ombre-secondaire: 0 0.4rem 0.6rem 0 var(--couleur-secondaire);
+
+    /* Polices */
+    --font-h1: 3.5rem;
+    --font-h2: 2.5rem;
+    --font-h3: 2rem;
+    --font-p: 2rem;
+    --font-small: 1.8rem;
+    --font-btn: 2rem;
+    --font-label: 1.6rem;
+
+    /* Formulaires */
+    --border-radius-principal: 1rem;
+    --input-padding: 1rem;
+    --label-font-weight: 600;
+
+    /* Boutons */
+    --btn-padding-vertical: 1.5rem;
+    --btn-padding-horizontal: 3rem;
+    --texte-boutons: #FFFFFF;
+
+    /* Largeurs et marges génériques */
+    --largeur-formulaire-standard: 50%;
+    --largeur-input-standard: 60%;
+    --largeur-input-adresse: 80%;
+    --marge-bottom-label: 0.5rem;
+}
+
+/*=== Marges et paddings modifiés ===*/
+
+.marges-specifiques {
+    margin: 3%;
+    padding: 3%;
+}
+
+/*=== Titres ===*/
+
+h1,
+h2,
+nav {
+    color: var(--couleur-primaire);
+    font-weight: 600;
+}
+
+h1 {
+    font-size: var(--font-h1);
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: var(--font-h2);
+}
+
+h3 {
+    font-size: var(--font-h3);
+    margin-bottom: 1.6rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.4rem;
+    color: var(--couleur-primaire);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.titre-centrer {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.titre-encadrer {
+    text-align: center;
+    border-radius: 2rem;
+    background-color: var(--couleur-secondaire-35);
+    box-shadow: var(--ombre-principale);
+    width: 100%;
+    padding: 1.5rem;
+    margin: 2% auto 4% auto;
+}
+
+/*=== Polices ===*/
+
+p {
+    font-size: var(--font-p);
+}
+
+.phrase-italique {
+    font-size: var(--font-small);
+    font-style: italic;
+    margin: 1rem;
+}
+
+.taille-police-liste-liens-légaux {
+    font-size: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.liens-legaux-espacement {
+    line-height: 4rem;
+    margin-right: 5rem;
+}
+
+/*=== Liens du site ===*/
+
+a {
+    color: var(--couleur-primaire);
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+a:visited {
+    color: var(--couleur-secondaire);
+}
+
+a:hover {
+    color: var(--couleur-primaire-40);
+    text-decoration: underline;
+}
+
+/*=== Boutons ===*/
+
+[class^="btn-"],
+[class*=" btn-"] {
+    background-color: var(--couleur-primaire);
+    color: var(--texte-boutons);
+    border: none;
+    padding: var(--btn-padding-vertical) var(--btn-padding-horizontal);
+    font-size: var(--font-btn);
+    box-shadow: var(--btn-shadow);
+    border-radius: var(--border-radius-principal);
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+a[class^="btn-"]:visited,
+a[class*=" btn-"]:visited {
+    color: var(--texte-boutons);
+    background-color: var(--couleur-primaire-60);
+}
+
+[class^="btn-"]:hover,
+[class*=" btn-"]:hover {
+    background-color: var(--couleur-primaire-40);
+    color: var(--couleur-tertiaire);
+    box-shadow: var(--ombre-principale);
+    transform: scale(1.03);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Animation rebond au clic pour tous les boutons btn-... */
+
+[class^="btn-"] {
+    transition: transform 0.15s ease;
+}
+
+[class^="btn-"]:active {
+    transform: scale(0.92);
+}
+
+/*=== Formulaires ===*/
+
+form {
+    background-color: var(--couleur-secondaire-25);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    border-radius: var(--border-radius-principal);
+    padding: 2%;
+    margin-bottom: 2%;
+    box-shadow: var(--ombre-principale);
+    border: none;
+}
+
+input {
+    border: none;
+    font-size: 1.5rem;
+    border-radius: var(--border-radius-principal);
+    padding: var(--input-padding) 0;
+}
+input[type="file"] {
+    display: none;
+}
+
+label {
+    font-size: var(--font-label);
+    font-weight: var(--label-font-weight);
+}
+
+form fieldset div label,
+form fieldset div input {
+    display: block;
+    width: 50%;
+    margin-bottom: var(--marge-bottom-label);
+}
+
+textarea {
+    border: none;
+    font-size: 1.8rem;
+    border-radius: var(--border-radius-principal);
+    resize: none;
+}
+
+/* Rendre certains contour de formulaires non visibles notamment certain bouton seul contenuent dans des form */
+
+.bordures-formulaire-invisible {
+    background-color: transparent;
+    box-shadow: none;
+    margin: 0;
+}
+
+/*=== Style global des tableaux ===*/
+
+.fond-tableaux {
+    background-color: var(--couleur-secondaire-25);
+    border-radius: 1rem;
+    padding: 2%;
+    box-shadow: var(--ombre-principale);
+    font-size: 1.8rem;
+    margin: 2rem 0 3rem 0;
+}
+
+td,
+th {
+    padding: 2rem;
+    text-align: center;
+}
+
+.entete-tableaux {
+    background-color: var(--couleur-primaire-40);
+    font-size: 1.8rem;
+}
+
+/*=== Header ===*/
+
+#logo-site {
+    max-width: 40%;
+    height: auto;
+    display: block;
+}
+
+header nav ul {
+    display: flex;
+    font-size: 2rem;
+}
+
+.infos-header > a {  /* correction de l'espace supplementaire a coté du logo */
+    display: inline-block;
+    max-width: 40%;
+}
+
+.infos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3%;
+    margin: 3%;
+}
+
+.menu-principal {
+    gap: 8rem;
+}
+
+/*=== Footer ===*/
+
+footer nav ul {
+    color: var(--couleur-primaire);
+    font-size: 2rem;
+}
+
+.infos-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    margin: 1%;
+    background-color: var(--couleur-secondaire-25);
+}
+
+.vert {
+    color: var(--couleur-texte);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    padding-left: 3rem;
+}
+
+.infos-contact {
+    color: var(--couleur-primaire);
+    margin-top: 0;
+    font-weight: 600;
+}
+
+.infos-contact {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+}
+
+/*=== Accessibilité ===*/
+
+legend,
+.burger {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    clip: rect(0, 0, 0, 0);
+}
+
+fieldset {
+    border: none;
+}

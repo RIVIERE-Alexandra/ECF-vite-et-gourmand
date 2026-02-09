@@ -1,0 +1,466 @@
+/*__________________________________________________
+|                                                   |
+|         ====== PAGE CHOIX DU MENU ======          |
+|__________________________________________________*/
+
+/*==== Style principal des menus ====*/
+
+.main-menus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.titre--nos-formules {
+    width: 60%;
+}
+
+.accroche-menu { /* phrase d'accroche */
+    font-style: italic;
+    font-weight: 500;
+    color: var(--couleur-texte);
+    margin-bottom: 3rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.delai-commande { /* phrase pour indiquer le delais minimum pour commander */
+    background-color: var(--couleur-secondaire-15);
+    color: red;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 4rem;
+    border-radius: var(--border-radius-principal);
+    box-shadow: var(--btn-shadow);
+    padding: 1rem;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.option-selection {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.menus-complet-type { /* bloc complet du menu avec les details cachés et visibles */
+    background-color: var(--couleur-secondaire-15);
+    border-radius: var(--border-radius-principal);
+    box-shadow: var(--ombre-principale);
+    width: 90%;
+    max-width: 1200px;
+    margin: 6rem auto;
+}
+
+.texte-allergens {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+/*=== Cacher la partie non visible pour en faire une carte deroulante du menu au clic ===*/
+.detail-menu-caché {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+}
+
+.detail-menu-caché.visible {
+    max-height: 7000px;
+}
+
+/*==== Filtres ====*/
+
+.filtres {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+}
+
+.btn-filtres {
+    background-color: var(--couleur-primaire);
+    color: var(--texte-boutons);
+    font-size: 1.6rem;
+    padding: 0.5rem;
+    margin: 1rem;
+    border: none;
+    border-radius: var(--border-radius-principal);
+    box-shadow: var(--btn-shadow);
+    width: 90%;
+}
+
+.liste-filtres {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.liste-filtres fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+}
+
+.liste-filtres fieldset label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.liste-filtres label {
+    font-size: 1.4rem;
+}
+
+.nb-personne-mini input {
+    border: #000000 0.5px solid;
+    text-align: center;
+}
+
+.btn-afficher-filtres {
+    display: none;
+}
+
+/*==== style du curseur de la fourchette de prix ====*/
+
+/* Retirer l'apparence de base */
+#fourchette-prix {
+    height: 12px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* === WebKit du slider pour : Chrome, Edge, Safari === */
+
+#fourchette-prix::-webkit-slider-runnable-track {
+    height: 12px;
+    background: var(--couleur-secondaire-35);
+    border-radius: 5rem;
+    border: none;
+}
+
+#fourchette-prix::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: var(--couleur-primaire);
+    margin-top: -4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    border: 2px solid #fff;
+    transition: transform .12s ease;
+}
+
+#fourchette-prix::-webkit-slider-thumb:hover {
+    transform: scale(1.06);
+}
+
+#fourchette-prix:focus {
+    outline: none;
+}
+
+#fourchette-prix:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 4px rgba(102, 0, 0, 0.12);
+}
+
+
+/* === WebKit du slider pour : Mozzilla Firefox === */
+#fourchette-prix::-moz-range-track {
+    height: 12px;
+    background: var(--couleur-secondaire-35);
+    border-radius: 5rem;
+    border: none;
+}
+
+#fourchette-prix::-moz-range-progress {
+    height: 12px;
+    background: var(--couleur-secondaire-35);
+    border-radius: 5rem;
+}
+
+#fourchette-prix::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: var(--couleur-primaire);
+    border: 2px solid #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+/* === WebKit du slider pour : Internet Explorer === */
+
+#fourchette-prix::-ms-track {
+    height: 12px;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+#fourchette-prix::-ms-fill-lower {
+    background: var(--couleur-secondaire-35);
+    border-radius: 5rem;
+}
+
+#fourchette-prix::-ms-fill-upper {
+    background: var(--couleur-secondaire-35);
+    border-radius: 5rem;
+}
+
+#fourchette-prix::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: var(--couleur-primaire);
+    border: 2px solid #fff;
+}
+
+/*==== Effet deroulant des filtres ====*/
+
+.liste-filtres fieldset {
+    display: none;
+}
+
+.liste-filtres fieldset.active {
+    display: block;
+}
+
+.liste-filtres fieldset {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.liste-filtres fieldset.active {
+    max-height: 500px;
+}
+
+
+/*==== Apparence d'une carte d'un menu ====*/
+
+.carte-visible {
+    border-radius: var(--border-radius-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.img-carte {  /* mon obectif est d'avoir une image carré malgré l'apprence native rectangulaire des images*/
+    flex: 0 0 auto;
+    width: 50%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: var(--border-radius-principal);
+    margin: 2rem;
+}
+
+.img-carte img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.texte-carte {
+    color: var(--couleur-primaire);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bouton-detail-menu {
+    background-color: #4E5B4B;
+    border-radius: var(--border-radius-principal);
+    color: var(--texte-boutons);
+    padding: 1rem 2rem;
+    border: none;
+    box-shadow: var(--btn-shadow);
+    margin: 1.5rem 0;
+    font-size: 2rem;
+    transition: transform 0.15s ease;
+
+    &:hover {
+        background-color: rgba(78, 91, 75, 0.5);
+        transform: scale(1.05);
+    }
+}
+
+.bouton-detail-menu:active {
+    transform: scale(0.92);
+}
+
+/*==== Partie Cachée des menus apres avoir cliquer sur le bouton detail menu====*/
+
+.detail-menu-caché {
+    border-bottom-left-radius: var(--border-radius-principal);
+    border-bottom-right-radius: var(--border-radius-principal);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+/* Galerie des photos du menu */
+
+.img-galerie-photos {
+    width: 32%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--border-radius-principal);
+    margin: 0.5rem;
+}
+
+.bloc-photos-menu {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.galerie-photos {
+    position: relative;
+    margin: 3rem auto;
+}
+
+.fleche-defilement-droite,
+.fleche-defilement-gauche {
+    position: absolute;
+    top: -15%;
+    font-size: 2.5rem;
+    cursor: pointer;
+    user-select: none;
+    font-weight: bold;
+    color: var(--couleur-primaire);
+}
+
+.fleche-defilement-gauche {
+    left: 10px;
+}
+
+.fleche-defilement-droite {
+    right: 10px;
+}
+
+/* Partie de la carte du menu qui contient les details du menu (plat, entrées, desserts, autres infos) */
+
+.texte-menus {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 3rem;
+}
+
+.titres-choix-menu {
+    font-size: 2.4rem;
+    color: var(--couleur-primaire);
+    display: block;
+    align-items: flex-start;
+}
+
+.texte-menus label {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.texte-menus label,
+.texte-menus input {
+    margin: 1rem;
+}
+
+.ajustement-quantite-menus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 2rem auto;
+    gap: 6rem;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+/* bloc location materiel */
+
+.checkbox-location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.checkbox-location input[type="checkbox"] {
+    transform: scale(1.2);
+}
+
+.info-icon { /* le "?" entourré */
+    color: var(--couleur-primaire);
+    font-weight: var(--font-weight-bold);
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--couleur-primaire);
+    text-align: center;
+    line-height: 16px;
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Bouton de fermeture de la pop-up */
+.popup-materiel .popup-fermer {
+    background-color: var(--couleur-primaire);
+    color: var(--texte-boutons);
+    border: none;
+    width: 25px;
+    height: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+/* Pop-up pour la location du matériel */
+.popup-materiel {
+    position: absolute;
+    color: var(--texte-boutons);
+    background-color: var(--couleur-primaire);
+    padding: 1rem;
+    border-radius: var(--border-radius-principal);
+    box-shadow: var(--couleur-ombre-principale);
+    z-index: 100;
+    max-width: 300px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.popup-materiel.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.popup-materiel p {
+    font-size: 1.5rem;
+}

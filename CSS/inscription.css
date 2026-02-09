@@ -1,0 +1,50 @@
+/*__________________________________________________
+|                                                   |
+|    ====== PAGE INSCRIPTION UTILISATEUR ======     |
+|__________________________________________________*/
+
+.formulaire-inscription {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding-right: 3rem;
+    width: 40%;
+}
+
+.formulaire-inscription fieldset div {
+    display: flex;
+    align-items: center;
+}
+
+.formulaire-inscription fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.btn-inscription {
+    display: block;
+    margin: 2rem auto 0 auto;
+}
+
+.main-inscription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.titre-inscription {
+    width: 30%;
+}
+
+.infoMotDePasse {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--couleur-primaire);
+}

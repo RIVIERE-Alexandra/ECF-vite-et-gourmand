@@ -1,0 +1,113 @@
+/*__________________________________________________
+|                                                   |
+|    ====== PAGE DE PAIEMENT UTILISATEUR ======     |
+|__________________________________________________*/
+
+.main-paiement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.titre-paiement {
+    width: 30%;
+}
+
+/*=== cadre recapitulatif de la commande ===*/
+
+.recap-commande-paiement {
+    width: 40%;
+    display: block;
+    text-align: left;
+    border: #000000 0.2px solid;
+    margin: 3rem auto;
+    padding: 1rem;
+    box-shadow: var(--btn-shadow);
+    border-radius: var(--border-radius-principal);
+}
+
+/*=== Bloc infos CB paiement ===*/
+
+.bloc-info-paiement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.bloc-info-paiement input {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.bloc-info-paiement label {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn-payer {
+    margin-top: 2rem;
+    align-self: center;
+}
+
+/*=== Bloc CVV + date ===*/
+
+.infos-cb {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+}
+
+.infos-cb>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 250px;
+}
+
+.infos-cb label {
+    display: block;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.infos-cb input {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    border-radius: var(--border-radius-principal);
+    box-sizing: border-box;
+}
+
+.cvv-et-help-ligne {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+}
+
+.cvv-et-help-ligne input {
+    width: 60%;
+    padding: 1rem;
+}
+
+.cvv-et-help-ligne small {
+    font-size: 1.4rem;
+    white-space: nowrap;
+}
+
+.infos-cb div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

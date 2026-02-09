@@ -1,0 +1,331 @@
+    /*_________________________________
+|                                     |
+| ======  RESPONSIVE MOBILE   ======  |
+|_____________________________________*/
+
+@media (max-width: 768px) {
+
+    .dashboard {
+        margin: 0.5rem;
+        width: 100%;
+    }
+
+    #logo-site {
+    max-width: 100%;
+    }
+
+    /* le header passe en menu burger clickable */
+
+    .menu-principal {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .menu-principal a {
+        font-size: 1.4rem;
+    }
+
+    .menu-principal.menu-ouvert {
+        display: flex;
+    }
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        width: 60px;
+        height: auto;
+        padding: 0.8rem;
+        cursor: pointer;
+        overflow: visible;
+        background-color: var(--couleur-primaire);
+        position: static;
+        clip: auto;
+        border-radius: var(--border-radius-principal);
+    }
+
+    .burger.ouvert span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger.ouvert span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.ouvert span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .burger span {
+        display: block;
+        align-self: center;
+        width: 60%;
+        height: auto;
+        padding: 0.25rem 0;
+        background-color: var(--texte-boutons);
+        transition: 0.3s;
+    }
+
+    /* barre laterale reste en haut faute de place */
+
+    .barre-laterale {
+        position: static;
+        width: 90%;
+        align-items: center;
+    }
+
+    .barre-laterale nav a {
+        width: 100%;
+    }
+
+    .barre-laterale-et-dashboard {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* tableaux avec scroll horizontal */
+
+    .commandes-recues,
+    .liste-employe,
+    .commandes-par-menus,
+    .gestion-avis {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .commandes-recues .fond-tableaux {
+        margin-left: 55rem;
+    }
+
+    .entete-tableaux {
+        font-size: 1.5rem;
+    }
+
+    /* === partie gestion menus === */
+
+    .gestion-menus {
+        width: 100% !important;
+    }
+
+    .gestion-menus input {
+        width: 100% !important;
+    }
+
+    .formulaires-dashboard-cacher textarea {
+        width: 100% !important;
+    }
+
+    .modification-menu-existant {
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .photo-principale-menu {
+        width: 100% !important;
+    }
+
+    .liste-elements-menu select {
+        width: 60%;
+    }
+
+    .alignement-img-galerie {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .alignement-img-galerie img {
+        max-width: 100% !important;
+    }
+
+    /* bouton de la section des menus */
+
+    .alignement-bouton-img-menu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .btn-modif-img-menu,
+    .btn-modif-galerie {
+        padding: 0.5rem;
+    }
+
+    /* partie gestion horaires */
+
+    .gestion-horaires {
+        width: 100% !important;
+    }
+
+    .gestion-horaires label {
+        align-self: flex-start;
+    }
+
+    .gestion-horaires span {
+        font-size: 1.6rem;
+    }
+
+    .alignement-horaires {
+        gap: 1rem;
+    }
+
+    /*partie gestion employés */
+
+    .formulaire-employes {
+        min-width: 300px;
+    }
+
+    /* partie statistiques */
+
+    #statistiques-annuelles {
+        width: 100%;
+        margin: 2rem auto;
+    }
+
+    #formulaire-stats {
+        width: 100%;
+    }
+
+    .filtres-menu-dashboard {
+        width: 100%;
+    }
+    .liste-elements-menu select {
+        font-size: 1.8rem;
+        max-width: 60%;
+    }
+}
+
+/*___________________________________
+|                                    |
+| ====== RESPONSIVE TABLETTE ======  |
+|____________________________________*/
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    :root {
+        --sidebar-width: clamp(180px, 28vw, 250px); /*pour adapter la taille de la barre laterale en fonction de la taille de l'écran*/
+    }
+
+    /* header */
+
+    .infos-header {
+        padding: 0.5rem;
+        margin: 0.5rem;
+    }
+
+    .menu-principal {
+        gap: 3rem;
+        font-size: 1.5rem;
+    }
+
+    #logo-site {
+        height: 10rem;
+        width: auto;
+        max-width: 100%;
+    }
+
+    /* le header passe en menu burger */
+
+    .menu-principal {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .menu-principal a {
+        font-size: 1.4rem;
+    }
+
+    .menu-principal.menu-ouvert {
+        display: flex;
+    }
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        width: 60px;
+        height: auto;
+        padding: 0.8rem;
+        cursor: pointer;
+        overflow: visible;
+        background-color: var(--couleur-primaire);
+        position: static;
+        overflow: visible;
+        clip: auto;
+        border-radius: var(--border-radius-principal);
+    }
+
+    .burger.ouvert span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger.ouvert span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.ouvert span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .burger span {
+        display: block;
+        align-self: center;
+        width: 60%;
+        height: auto;
+        padding: 0.25rem 0;
+        background-color: var(--texte-boutons);
+        transition: 0.3s;
+    }
+
+        /* barre laterale et dashboard */
+    .dashboard {
+        margin-left: calc(var(--sidebar-width) + 4rem);
+        max-width: calc(120% - var(--sidebar-width) - 3rem);
+        display: block;
+    }
+
+    .barre-laterale {
+        width: var(--sidebar-width);
+        margin-left: 2rem;
+        margin-top: 22%;
+        padding: 1rem 0;
+        position: fixed;
+        top: 2rem;
+    }
+
+        /* tableaux avec scroll horizontal */
+
+    .commandes-recues,
+    .liste-employe,
+    .commandes-par-menus,
+    .gestion-avis {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .commandes-recues .fond-tableaux {
+        margin-left: 20rem;
+    }
+
+    .entete-tableaux {
+        font-size: 1.5rem;
+    }
+
+    /* gestion menus */
+
+    .alignement-bouton-img-menu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .photo-principale-menu {
+        width: 100% !important;
+    }
+
+    .alignement-img-galerie {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .alignement-img-galerie img {
+        max-width: 100% !important;
+    }
+}

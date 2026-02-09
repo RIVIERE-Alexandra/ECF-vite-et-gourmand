@@ -1,0 +1,24 @@
+/*__________________________________________________
+|                                                   |
+|    ====== PAGE DE RESET DE MOT DE PASSE ======    |
+|__________________________________________________*/
+
+.btn-reset-mdp {
+    align-self: flex-start;
+}
+
+.form-reset-mdp {
+    margin: 0 auto;
+    width: 30%;
+    text-align: left;
+}
+
+.input-reset-mdp {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.texte-reset-mdp {
+    text-align: center;
+    margin: 2rem 0;
+}

@@ -1,0 +1,71 @@
+/*__________________________________________________
+|                                                   |
+|     ======  PAGE ESPACE UTILISATEUR   ======      |
+|__________________________________________________*/
+
+/*=== Espace utilisateur - styles généraux ===*/
+
+.centrer-contenu-espace-utilisateur {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+    gap: 2rem;
+}
+
+.espace-perso {
+    max-width: 30%;
+}
+
+.infos-perso-visibles, .carte-mode-edition {
+    margin: 2rem;
+}
+
+/*=== Espace utilisateur - affichage des infos perso ===*/
+.infos-perso-visibles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.btn-modif-infos-user {
+    align-self: center;
+}
+
+.formulaire-info-utilisateur {
+    width: 25%;
+    align-items: center;
+}
+
+/*=== Espace utilisateur - mode édition ===*/
+
+.carte-mode-edition {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.formulaire-info-personnelle fieldset div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
+.formulaire-info-personnelle input {
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+/*=== reinitialisation mot de passe ===*/
+
+.reset-mdp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 2.5rem;
+}
+
