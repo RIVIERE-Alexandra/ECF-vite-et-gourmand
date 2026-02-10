@@ -10,7 +10,7 @@ if (!isset($_SESSION['user_logged_in'])) {
 
 // Vérifie si le formulaire est soumis
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SESSION['user_admin'] === false) {
-    // Récupération sécurisée des données
+    
     $nom = trim($_POST['nom'] ?? '');
     $avis = trim($_POST['avis'] ?? '');
     $note = intval($_POST['note'] ?? 0);

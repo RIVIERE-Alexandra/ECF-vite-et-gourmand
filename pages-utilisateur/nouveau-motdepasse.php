@@ -35,6 +35,7 @@ if (isset($_GET['mdpTemp'])) {
                 if ($newPassword === $confirmPassword) {
 
                     if (strlen($newPassword) >= 10 && preg_match('/[A-Z]/', $newPassword) && preg_match('/[a-z]/', $newPassword) && preg_match('/[0-9]/', $newPassword) && preg_match('/[\W_]/', $newPassword)) {
+                        
                         // Mettre à jour le mot de passe dans la base de données
                         $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
                         $stmt = $pdo->prepare("UPDATE client SET `MotDePasse` = :motdepasse WHERE id_client = :user_id");

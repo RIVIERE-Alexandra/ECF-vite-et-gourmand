@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['commander_menu']) && 
         ");
                     $stmt->execute([$nouvelle_quantite, $pret_materiel, $ligneExistante['id_ligne_cmd']]);
                 } else {
-                    // Sinon, nouvelle ligne
+                    // Sinon, creer une nouvelle ligne
                     $stmt = $pdo->prepare("
             INSERT INTO ligne_commandes 
             (id_commandes, id_menus, quantité, pret_de_materiel, restitution_de_materiel, Entrée, Plat, Dessert)

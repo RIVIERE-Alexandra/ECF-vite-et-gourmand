@@ -10,6 +10,7 @@ if (!isset($_SESSION['user_logged_in']) || $_SESSION['user_logged_in'] === false
 
 require_once '../bd.php';
 $adresse_livraison = $_GET['adresse'] ?? null;
+
 /* ======================
    TRAITEMENT DU PAIEMENT
    ====================== */

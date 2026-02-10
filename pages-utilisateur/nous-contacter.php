@@ -9,18 +9,18 @@ $success = "";
 $error = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_SESSION['user_admin'] === false) {
-    // Récupérer et sécuriser les données
+    
     $nom = trim(htmlspecialchars($_POST['nom']));
     $email = trim(htmlspecialchars($_POST['email']));
     $titre = trim(htmlspecialchars($_POST['titre']));
     $message = trim(htmlspecialchars($_POST['message']));
 
-    // Vérifier que les champs ne sont pas vides
+    
     if (!empty($nom) && !empty($email) && !empty($titre) && !empty($message)) {
-        // Vérifier que l'email est valide
+        
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            // Préparer le mail
-            $to = "contact@viteetgourmand.fr"; // Remplace par ton email réel
+            
+            $to = "contact@viteetgourmand.fr"; 
             $subject = "Formulaire de contact : " . $titre;
             $body = "Nom : $nom\n";
             $body .= "Email : $email\n\n";

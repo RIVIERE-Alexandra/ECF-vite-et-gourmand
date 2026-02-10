@@ -35,7 +35,7 @@ if (!empty($regimes)) {
     )";
         $params[':regime'] = $regimes;
     } else {
-        // Si le régime n'existe pas, on ajoute une condition impossible pour ne retourner aucun menu
+        // S'il n'y a pas de regime, on met une condition impossible pour n'avoir aucun resultat
         $query .= " AND 1=0";
     }
 }
@@ -112,7 +112,7 @@ $menus = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             $reqCompo->execute([$menu['id_menus']]);
                             $compos = $reqCompo->fetchAll(PDO::FETCH_ASSOC);
 
-                            // Grouper par type
+                            // Grouper par type (classique, evenement,...)
                             $groupedCompos = [];
                             foreach ($compos as $c) {
                                 $key = strtolower($c['type']);
